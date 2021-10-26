@@ -1,0 +1,107 @@
+/* banner section */
+.banner {
+    background-color:brown;
+    width: 100%;
+    height:85vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    line-height: 2rem;
+}
+
+.animate__bounceInDown {
+    font-family: 'Otomanopee One', sans-serif;
+    text-align: center;
+}
+
+.animate__animated span {
+    display: block;
+}
+
+.para2{
+    font-weight: 300;
+    font-size: 1rem;
+}
+
+.arrow{
+    transform: rotate(90deg);
+    font-size: 2rem;
+}
+
+/* works section */
+.works {
+    background-color:cadetblue;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.works h2 {
+    width: 100%;
+}
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.project-card {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    width: 300px;
+}
+
+input[type=button] {
+    padding:0.1rem;
+    border-width: 8px;
+    border-style: double;
+    border-color: green;
+    border-radius: 3px;
+    background-color: brown;
+    color:#fff;
+}
+
+
+/* about section */
+.about {
+    background-color:coral;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.about-wrapper {
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.about-wrapper img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+
+}
+
+.about-wrapper .about-content {
+    box-sizing: border-box;
+    border: 1px solid red;
+    border-style: double;
+    border-width: 8px;
+    padding: 1rem;
+}
