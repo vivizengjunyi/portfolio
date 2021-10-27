@@ -104,4 +104,15 @@ input[type=button] {
     border-style: double;
     border-width: 8px;
     padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.sun {
+    font-size: 30px;
+    color: #fff;
+    text-align: center;
 }

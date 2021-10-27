@@ -3,6 +3,7 @@ import projects from '../../globals/projects';
 import about from '../../globals/about';
 import Contact from '../../components/Contact';
 import { MdDoubleArrow } from "react-icons/md";
+import { FaSun } from "react-icons/fa";
 import "./index.css";
 import placeholder from '../../images/portfolio-logo.png';
 import me from '../../images/IMG_0751.jpg';
@@ -36,6 +37,7 @@ const PageHome = () => {
                 <img src={me} alt='my photo' />
                 {about.map((singleAbout, i) => 
                 <div className='about-content'>
+                    <FaSun className='sun' />
                     <p>{singleAbout.content}</p>
                 </div>
                 )}
