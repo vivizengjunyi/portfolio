@@ -1,46 +1,83 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import Typewriter from "typewriter-effect";
 import projects from '../../globals/projects';
 import about from '../../globals/about';
 import Contact from '../../components/Contact';
 import { MdDoubleArrow } from "react-icons/md";
-import { FaSun } from "react-icons/fa";
+import { BsGithub } from 'react-icons/bs';
+import { AiFillLinkedin, AiOutlineMail } from 'react-icons/ai';
 import "./index.css";
-import placeholder from '../../images/portfolio-logo.png';
 import me from '../../images/IMG_0751.jpg';
 
 const PageHome = () => {
+    const [showWorks, setShowWorks] = useState(false);
+
+    useEffect(() => {
+        document.addEventListener('scroll', function (e) {
+            const clientHeight = document.documentElement.clientHeight
+            const scrollTop = document.documentElement.scrollTop
+            console.log(scrollTop)
+            const sections = document.getElementsByTagName("section");
+            if (sections[0] && sections[1]) {
+                const section1Height = sections[0].clientHeight
+                const section2Height = 350
+                const showWorks = clientHeight + scrollTop > section1Height + section2Height;
+                setShowWorks(showWorks)
+            }
+        });
+
+
+    })
     return (
         <div>
             <section className="banner">
-                <h1 className="animate__animated animate__bounceInDown">Hello! My name is <span> Junyi(vivi) Zeng,</span></h1>
-                <p className="para2">a front-end web developer</p>
+                <p className="animate__animated animate__bounce">Hello!</p>
+                <div className='flex-container'>
+                    <p>I am </p>
+                    <p className='iteration'><Typewriter
+                        onInit={(Typewriter) => {
+                            Typewriter
+                                .typeString('Junyi(Vivi) Zeng.')
+                                .pauseFor(2000)
+                                .deleteAll()
+                                .typeString('a front-end web developer.')
+                                .start();
+                        }}
+                    /></p>
+                </div>
+                <div className='social-icons'>
+                    <a href="google.com"><AiOutlineMail /></a>
+                    <a href="google.com"><BsGithub /></a>
+                    <a href="google.com"><AiFillLinkedin /></a>
+                </div>
                 <a href="#about"><MdDoubleArrow className='arrow' /></a>
             </section>
             <section className="works" id="works">
                 <h2>My Projects</h2>
                 <div className="projects">
-                {projects.map((singleProject, i) =>
-                    <div key={i} className='project-card'>
-                        <img src={placeholder} alt='no name'/>
-                        <div className='projectInfo'>
-                            <h4>{singleProject.name}</h4>
-                            <p>{singleProject.briefIntro}</p>
-                            <input type="button" value="More Info"></input>
-                        </div>
-                    </div>
-                )}
+                    {
+                        showWorks && projects.map((singleProject, i) =>
+                            <div key={i} className='project-card'>
+                                <img src={singleProject.image} alt='no name' />
+                                <div className='projectInfo'>
+                                    <h4>{singleProject.name}</h4>
+                                    <p>{singleProject.briefIntro}</p>
+                                    <input type="button" value="More Info"></input>
+                                </div>
+                            </div>
+                        )
+                    }
                 </div>
             </section>
             <section className="about" id="about">
-                <div className='about-wrapper'>
                 <h2>About Me</h2>
-                <img src={me} alt='my photo' />
-                {about.map((singleAbout, i) => 
-                <div className='about-content'>
-                    <FaSun className='sun' />
-                    <p>{singleAbout.content}</p>
-                </div>
-                )}
+                <div className='about-wrapper'>
+                    <img src={me} alt='my' />
+                    {about.map((singleAbout, i) =>
+                        <div className='about-content'>
+                            <p>{singleAbout.content}</p>
+                        </div>
+                    )}
                 </div>
             </section>
             <Contact />

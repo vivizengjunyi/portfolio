@@ -1,66 +1,122 @@
 /* banner section */
 .banner {
-    background-color:brown;
     width: 100%;
     height:85vh;
     display:flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: #fff;
     line-height: 2rem;
+    gap: 1rem;
+    background: brown;
 }
 
-.animate__bounceInDown {
+.animate__animated {
     font-family: 'Otomanopee One', sans-serif;
     text-align: center;
+    font-size: 1.5rem;
+    color: #440D0F;
 }
 
-.animate__animated span {
-    display: block;
+.flex-container {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.para2{
-    font-weight: 300;
-    font-size: 1rem;
+.flex-container P:nth-child(1) {
+    font-size: 1.3rem;
+    font-family: 'Otomanopee One', sans-serif;
+    color: #F3B61F;
+}
+
+.flex-container P:nth-child(2) {
+    font-size: 1.3rem;
+    color: #F3B61F;
+    text-align: center;
+    font-family: 'Otomanopee One', sans-serif;
+}
+
+.banner .social-icons a{
+    color: #440D0F;
+    margin-left: 1rem;
+    font-size: 1.5rem;
+    display: inline-block;
+}
+
+.banner .social-icons a:hover {
+    animation: heartBeat;
+    animation-duration: 2s;
+    color:#fff;
 }
 
 .arrow{
     transform: rotate(90deg);
-    font-size: 2rem;
+    font-size: 1.5rem;
+    color: #F3B61F;
 }
 
 /* works section */
 .works {
-    background-color:cadetblue;
     display: flex;
     flex-direction: column;
     text-align: center;
     width: 100%;
     padding-top: 2rem;
     padding-bottom: 2rem;
+    min-height: 500px;
 }
 
 .works h2 {
     width: 100%;
+    margin-bottom: 2rem;
+    animation: flipInX;
+    animation-duration: 2s;
+    text-align: left;
+    padding-left: 1rem;
 }
 
 .projects {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
 }
+
+.projects img {
+    width: 250px;
+}
+
+.project-card:nth-child(1) {
+    animation: slideInUp;
+    animation-duration:2s;
+}
+
+.project-card:nth-child(2) {
+    animation: slideInUp;
+    animation-duration: 2s;
+} 
+
+.project-card:nth-child(3) {
+    animation: slideInUp;
+    animation-duration: 2s;
+} 
 
 .project-card {
     display:flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    width: 300px;
+    width: 290px;
+    height: 400px;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+@media (min-width: 65rem) {
+
 }
 
 input[type=button] {
@@ -73,12 +129,12 @@ input[type=button] {
     color:#fff;
 }
 
-
 /* about section */
 .about {
-    background-color:coral;
     padding-top: 2rem;
     padding-bottom: 2rem;
+    background: brown;
+    color: #fff;
 }
 
 .about-wrapper {
@@ -88,6 +144,12 @@ input[type=button] {
     justify-content: center;
     align-items: center;
     gap: 1rem;
+} 
+
+.about h2 {
+    text-align: left;
+    padding-left: 1rem;
+    color:#000;
 }
 
 .about-wrapper img {
@@ -95,24 +157,17 @@ input[type=button] {
     height: 100px;
     object-fit: cover;
     border-radius: 50%;
-
+    border: 1px solid #fff;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }
 
 .about-wrapper .about-content {
-    box-sizing: border-box;
-    border: 1px solid red;
-    border-style: double;
-    border-width: 8px;
+    border: 1px solid #fff;
     padding: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 1rem;
-}
-
-.sun {
-    font-size: 30px;
-    color: #fff;
-    text-align: center;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }
