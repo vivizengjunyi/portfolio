@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { HashLink } from 'react-router-hash-link';
 import Typewriter from "typewriter-effect";
 import projects from '../../globals/projects';
 import about from '../../globals/about';
@@ -50,7 +51,7 @@ const PageHome = () => {
                     <a href="google.com"><BsGithub /></a>
                     <a href="google.com"><AiFillLinkedin /></a>
                 </div>
-                <a href="#about"><MdDoubleArrow className='arrow' /></a>
+                <HashLink smooth to="#works"><MdDoubleArrow  className='arrow' /></HashLink>
             </section>
             <section className="works" id="works">
                 <h2>My Projects</h2>

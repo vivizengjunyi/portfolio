@@ -5,7 +5,7 @@ import './index.css';
 const Footer = () => {
     return (
         <div className='footer'>
-            <p>&copy; Junyi(Vivi) Zeng | Created with <FaReact /></p>
+            <p>&copy; Junyi(Vivi) Zeng | Created with <FaReact className='react-icon' /></p>
         </div>
     )
 }
