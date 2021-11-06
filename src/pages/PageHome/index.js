@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 import Typewriter from "typewriter-effect";
 import projects from '../../globals/projects';
@@ -63,7 +64,9 @@ const PageHome = () => {
                                 <div className='projectInfo'>
                                     <h4>{singleProject.name}</h4>
                                     <p>{singleProject.briefIntro}</p>
-                                    <input type="button" value="More Info"></input>
+                                    <Link to={`/project/` + i}>
+                                        <input type="button" value="More Info"></input>
+                                    </Link>
                                 </div>
                             </div>
                         )
