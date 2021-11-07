@@ -52,7 +52,7 @@ const PageHome = () => {
                     <a href="google.com"><BsGithub /></a>
                     <a href="google.com"><AiFillLinkedin /></a>
                 </div>
-                <HashLink smooth to="#works"><MdDoubleArrow  className='arrow' /></HashLink>
+                <HashLink smooth to="#works"><MdDoubleArrow className='arrow' /></HashLink>
             </section>
             <section className="works" id="works">
                 <h2>My Projects</h2>
@@ -60,13 +60,23 @@ const PageHome = () => {
                     {
                         showWorks && projects.map((singleProject, i) =>
                             <div key={i} className='project-card'>
-                                <img src={singleProject.image} alt='no name' />
-                                <div className='projectInfo'>
-                                    <h4>{singleProject.name}</h4>
+                                <div className='project-img'>
+                                    <img src={singleProject.image} alt={singleProject.name} />
+                                </div>
+                                <div className='project-info'>
+                                    <h3>{singleProject.name}</h3>
                                     <p>{singleProject.briefIntro}</p>
-                                    <Link to={`/project/` + i}>
-                                        <input type="button" value="More Info"></input>
-                                    </Link>
+                                    <div className='tool-list'>
+                                        <h4>Tools</h4>
+                                        {singleProject.tool.map((SingleTool) =>
+                                            <SingleTool className='tool-icon' />
+                                        )}
+                                    </div>
+                                </div>
+                                <div className='links'>
+                                    <a href={singleProject.projectLink}>View Live Site</a>
+                                    <Link to={`/project/` + i}>More Info</Link>
+                                    <a href={singleProject.gitHubLink}>View on gitHub</a>
                                 </div>
                             </div>
                         )

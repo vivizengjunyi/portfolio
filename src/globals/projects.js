@@ -7,7 +7,7 @@ const projects = [
     {
         'id': 1,
         'name': 'Capstone Project',
-        'briefIntro': 'This is a WordPress and Woocommerce project',
+        'briefIntro': 'This is a WordPress and Woocommerce project.This is a WordPress and Woocommerce project.This is a WordPress and Woocommerce project.',
         'image':gomovie,
         'video': video1,
         'overview':'Screen Play was developed with React using the Movie Database API. This responsive web application allows users to browse and filter through a database of movies that are new releases, popular or upcoming. It has the functionalities to select favourite movies and add them to a watch list.',
@@ -24,7 +24,7 @@ const projects = [
         'id': 2,
         'name': 'React Movie Database',
         'projectPage': '',
-        'briefIntro': 'This is a React project',
+        'briefIntro': 'This is a React project.This is a WordPress and Woocommerce project.This is a WordPress and Woocommerce project.',
         'image':gomovie,
         'video': video1,
         'overview':'Screen Play was developed with React using the Movie Database API. This responsive web application allows users to browse and filter through a database of movies that are new releases, popular or upcoming. It has the functionalities to select favourite movies and add them to a watch list.',
@@ -40,7 +40,7 @@ const projects = [
     {
         'id': 3,
         'name': 'React Portfolio',
-        'briefIntro': 'This is a React project',
+        'briefIntro': 'This is a React project.This is a WordPress and Woocommerce project.This is a WordPress and Woocommerce project.',
         'image':gomovie,
         'video': video1,
         'overview':'Screen Play was developed with React using the Movie Database API. This responsive web application allows users to browse and filter through a database of movies that are new releases, popular or upcoming. It has the functionalities to select favourite movies and add them to a watch list.',
