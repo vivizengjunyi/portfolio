@@ -15,6 +15,7 @@ const PageHome = () => {
     const [showWorks, setShowWorks] = useState(false);
 
     useEffect(() => {
+        
         document.addEventListener('scroll', function (e) {
             const clientHeight = document.documentElement.clientHeight
             const scrollTop = document.documentElement.scrollTop
