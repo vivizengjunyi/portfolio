@@ -122,3 +122,11 @@ li a {
     margin-right: 0.5rem;
     width: 1.5rem;
 }
+
+@media (min-width: 46rem) {
+    .btn-menu {
+        display: none;
+    }
+
+    
+}

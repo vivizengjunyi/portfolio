@@ -3,6 +3,8 @@
     justify-content:center;
     align-items: center;
     background: #FEF7DC;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
 }
 .button {
     --offset: 10px;

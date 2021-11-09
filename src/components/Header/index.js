@@ -28,7 +28,7 @@ function Header() {
                 <ul>
                     <li><AiFillHome className='icon'/><NavLink to="/" onClick={toggle}>Home</NavLink></li>
                     <li><AiOutlineFundProjectionScreen className='icon'/><a href="/#works" onClick={toggle}>Works</a></li>
-                    <li><FaSun  className='icon'/><NavLink to="/#about" onClick={toggle}>About</NavLink></li>
+                    <li><FaSun  className='icon'/><a href="/#about" onClick={toggle}>About</a></li>
                 </ul>
             }
 
