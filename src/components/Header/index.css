@@ -6,6 +6,9 @@
     background:#B08A03;
 }
 
+/* .logo {
+    width: 3rem;
+} */
 .btn-menu {
     margin: 0 20px 20px 0;
     display: block;
@@ -123,9 +126,22 @@ li a {
     width: 1.5rem;
 }
 
+.navbar {
+    display: none;
+}
+
 @media (min-width: 46rem) {
     .btn-menu {
         display: none;
+    }
+
+    .navbar {
+        display: block;
+    }
+
+    .navbar {
+        z-index: 100;
+        background-color: unset;
     }
 
     
