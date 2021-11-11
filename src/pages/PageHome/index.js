@@ -23,14 +23,13 @@ const PageHome = () => {
             console.log(scrollTop)
             const sections = document.getElementsByTagName("section");
             if (sections[0] && sections[1]) {
-                const section1Height = sections[0].clientHeight
-                const section2Height = 350
-                const showWorks = clientHeight + scrollTop > section1Height + section2Height;
-                setShowWorks(showWorks)
+                const section1Height = sections[0].clientHeight;
+                const section2Height = sections[1].clientHeight;
+                const section3Height = 350;
+                const showWorks = clientHeight + scrollTop > section1Height + section2Height + section3Height;
+                setShowWorks(showWorks);
             }
         });
-
-
     })
     return (
         <div>
@@ -53,6 +52,37 @@ const PageHome = () => {
                     <a href="google.com"><AiOutlineMail /></a>
                     <a href="google.com"><BsGithub /></a>
                     <a href="google.com"><AiFillLinkedin /></a>
+                </div>
+            </section>
+
+            <section className="about" id="about">
+                <h2>About Me</h2>
+                <picture>
+                    <source media="(min-width:99rem)" srcset={myPhotoBig} />
+                    <img src={myPhoto} alt="my photo" />
+                </picture>
+                <div className='about-info'>
+                    {about.map((singleAbout, i) =>
+                        <p>{singleAbout.content}</p>
+                    )}
+                </div>
+                <div className='stack'>
+                    <div className='teck-stack'>
+                        <h3>Teck Stack</h3>
+                        <div className='stack-list'>
+                            {about[3].teckStack.map(singleTeckStack =>
+                                <span>{singleTeckStack}</span>
+                            )}
+                        </div>
+                    </div>
+                    <div className='design-stack'>
+                        <h3>Design Stack</h3>
+                        <div className='stack-list'>
+                            {about[4].designStack.map(singleDesignStack =>
+                                <span>{singleDesignStack}</span>
+                            )}
+                        </div>
+                    </div>
                 </div>
             </section>
             <section className="works" id="works">
@@ -83,38 +113,6 @@ const PageHome = () => {
                         )
                     }
                 </div>
-            </section>
-            <section className="about" id="about">
-                <h2>About Me</h2>
-                <picture>
-                    <source media="(min-width:99rem)" srcset={myPhotoBig} />
-                    <img src={myPhoto} alt="my photo" />
-                </picture>
-                <div className='about-info'>
-                    {about.map((singleAbout, i) =>
-                        <p>{singleAbout.content}</p>
-                    )}
-                </div>
-                <div className='stack'>
-                    <div className='teck-stack'>
-                        <h3>Teck Stack</h3>
-                        <div className='stack-list'>
-                            {about[3].teckStack.map(singleTeckStack =>
-                                <span>{singleTeckStack}</span>
-                            )}
-                        </div>
-                    </div>
-                    <div className='design-stack'>
-                        <h3>Design Stack</h3>
-                        <div className='stack-list'>
-                            {about[4].designStack.map(singleDesignStack =>
-                                <span>{singleDesignStack}</span>
-                            )}
-                        </div>
-                    </div>
-                </div>
-
-
             </section>
             <Contact />
         </div>

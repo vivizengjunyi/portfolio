@@ -2,7 +2,7 @@
     display: flex;
     justify-content:center;
     align-items: center;
-    background: #FEF7DC;
+    background: var(--color1);
     padding-top: 3rem;
     padding-bottom: 3rem;
 }
@@ -14,7 +14,7 @@
     appearance: none;
     border: 0;
     background: transparent;
-    color: #B08A03;
+    color: var(--color4);
     letter-spacing: 0.25em;
     outline: none;
     cursor: pointer;
@@ -79,7 +79,7 @@
 }
 
 .contact .social-icons a{
-    color: #342B09;
+    color: var(--color5);
     margin-left: 1rem;
     font-size: 2rem;
     display: inline-block;
@@ -89,12 +89,12 @@
 .contact .social-icons a:hover {
     animation: heartBeat;
     animation-duration: 2s;
-    color: #B08A03;
+    color: var(--color4);
 }
 
 .contact .social-icons a:active,
 .contact .social-icons a:focus {
-    color: #342B09;
+    color: var(--color5);
 }
 
 @media (min-width: 64rem) {

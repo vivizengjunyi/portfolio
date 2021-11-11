@@ -4,8 +4,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #342B09;
-    color: #B08A03;
+    background-color: var(--color5);
+    color: var(--color4);
     font-family: 'Montserrat', sans-serif;
 }
 

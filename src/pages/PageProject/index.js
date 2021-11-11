@@ -9,15 +9,15 @@ const PageProject = () => {
     const singleProject = projects[id];
 
     useEffect(() => {
-        document.body.scrollTop = 0; // For Safari
-        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
     }, [])
     return (
         <>
             <div className='single-project-page'>
                 <section className='video-section'>
-                    <video>
-                        <source playinline autoplay loop muted src={singleProject.video} type="video/mp4" />
+                    <video autoPlay muted loop>
+                        <source src={singleProject.video} type="video/mp4" />
                     </video>
                     <div className='links'>
                         <a href={singleProject.projectLink}>View Live Site</a>
@@ -30,9 +30,12 @@ const PageProject = () => {
                         <h3>BCIT School Project</h3>
                         <p>{singleProject.date}</p>
                     </div>
+                    <div className='project-role'>
+                        <h3>Role</h3>
+                        <p>{singleProject.role}</p>
+                    </div>
                     <div className='tool'>
                         <h3>Tools</h3>
-
                         {singleProject.tool.map((SingleTool) =>
                             <SingleTool className='tool-icon' />
                         )}
@@ -41,13 +44,10 @@ const PageProject = () => {
                         <p>{singleProject.overview}</p>
                     </div>
                 </section>
-                <section className='planing-section'>
-                    <h3>Planning Stage</h3>
-                    <p>{singleProject.planning}</p>
-                </section>
                 <section className='code-section'>
                     <h3>Code</h3>
                     <p>{singleProject.code}</p>
+                    <iframe width="100%" height="300" src={singleProject.iframe} allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
                 </section>
                 <section className='reflection-section'>
                     <h3>Reflection</h3>
