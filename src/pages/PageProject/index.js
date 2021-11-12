@@ -20,8 +20,8 @@ const PageProject = () => {
                         <source src={singleProject.video} type="video/mp4" />
                     </video>
                     <div className='links'>
-                        <a href={singleProject.projectLink}>View Live Site</a>
-                        <a href={singleProject.gitHubLink}>View on gitHub</a>
+                        <a href={singleProject.projectLink} target="_blank">View Live Site</a>
+                        <a href={singleProject.gitHubLink} target="_blank">View on gitHub</a>
                     </div>
                 </section>
                 <h1>{singleProject.name}</h1>

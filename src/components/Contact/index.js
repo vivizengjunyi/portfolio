@@ -10,9 +10,9 @@ const contact = () => {
             <div className='button'>
                 <h2>Reach Out to Me</h2>
                 <div className='social-icons'>
-                    <a href="google.com"><AiOutlineMail /></a>
-                    <a href="google.com"><BsGithub /></a>
-                    <a href="google.com"><AiFillLinkedin /></a>
+                    <a href="mailto:vivizengjunyi@gmail.com" target="_blank"><AiOutlineMail /></a>
+                    <a href="https://github.com/vivizengjunyi" target="_blank"><BsGithub /></a>
+                    <a href="https://www.linkedin.com/in/junyi-zeng-266b811a1/" target="_blank"><AiFillLinkedin /></a>
                 </div>
                 <div class="button__horizontal"></div>
                 <div class="button__vertical"></div>
