@@ -13,6 +13,7 @@ function AppRouter() {
         <main className="main">
           <Switch>
             <Route path="/" exact><PageHome /></Route>
+            <Route path="/index.html" exact><PageHome /></Route>
             <Route path="/project/:id"><PageProject /></Route>
           </Switch>
         </main>
