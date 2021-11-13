@@ -4,6 +4,7 @@ import Typewriter from "typewriter-effect";
 import projects from '../../globals/projects';
 import about from '../../globals/about';
 import Contact from '../../components/Contact';
+import Weather from '../../components/Weather';
 import { BsGithub } from 'react-icons/bs';
 import { AiFillLinkedin, AiOutlineMail } from 'react-icons/ai';
 import "./index.css";
@@ -53,8 +54,10 @@ const PageHome = () => {
                     <a href="https://github.com/vivizengjunyi" target="_blank"><BsGithub /></a>
                     <a href="https://www.linkedin.com/in/junyi-zeng-266b811a1/" target="_blank"><AiFillLinkedin /></a>
                 </div>
+                <div className='weather'>
+                    <Weather />
+                </div>
             </section>
-
             <section className="about" id="about">
                 <h2>About Me</h2>
                 <picture>

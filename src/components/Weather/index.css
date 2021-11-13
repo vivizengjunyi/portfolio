@@ -1,0 +1,120 @@
+.weather {
+    display: flex;
+    flex-direction: column;
+    box-sizing: content-box;
+    align-items: center;
+    justify-content: center;
+    position:absolute;
+    top:30px;
+    left:5px;
+    color: var(--color4);
+    background-color: var(--color2);
+    width: 180px;
+    height:auto;
+    border-radius: 5px;
+    z-index: 0;
+}
+
+.weather select {
+    background-color: var(--color5);
+    color: var(--color4);
+    border-radius: 5px;
+    padding: 0.2rem;
+}
+
+.weather select option {
+    text-align: center;
+}
+
+.city-name {
+    font-family: 'Otomanopee One', sans-serif;
+    font-size: 1.5rem;
+}
+
+.weather-name {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+}
+
+.weather-icon {
+    width: 60px;
+}
+
+.weather-current {
+    font-size: 1rem;
+}
+
+.weather-current {
+    font-size: 3rem;
+}
+
+.weather-current sup {
+    font-size: 1rem;
+}
+
+.weather-range {
+    display: flex;
+    flex-direction: row;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 0.5rem;
+}
+
+.weather-range .min {
+    margin-right: 1rem;
+    font-size: 0.8rem;
+}
+
+.weather-range .max {
+    font-size: 0.8rem;
+}
+
+@media (max-width:45rem) {
+    .weather {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 300px;
+        height:auto;
+        justify-content: space-around;
+        position: absolute;
+        margin: auto;
+        transform:translate(-50%, -50%);
+        left: 50%;
+        top: 45px;
+    }
+
+
+    .city-name {
+        display: none;
+    }
+
+    .city-date {
+        display: none;
+    }
+
+    .city-time {
+        font-size: 1rem;
+    }
+
+    .weather-name {
+        display:none;
+    }
+
+    .weather-icon {
+        display: none;
+    }
+
+    .weather-current {
+       font-size: 1.2rem;
+    }
+
+    .weather-current sup {
+        font-size: 0.7rem;
+    }
+
+    .weather-range {
+    display: none;
+    }
+
+}
