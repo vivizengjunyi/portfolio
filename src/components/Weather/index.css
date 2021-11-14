@@ -20,6 +20,7 @@
     color: var(--color4);
     border-radius: 5px;
     padding: 0.2rem;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .weather select option {
@@ -31,6 +32,11 @@
     font-size: 1.5rem;
 }
 
+.city-date,
+.city-time {
+    font-family: 'Montserrat', sans-serif;
+}
+
 .weather-name {
     font-family: 'Montserrat', sans-serif;
     font-size: 1rem;
@@ -38,10 +44,6 @@
 
 .weather-icon {
     width: 60px;
-}
-
-.weather-current {
-    font-size: 1rem;
 }
 
 .weather-current {
@@ -106,11 +108,12 @@
     }
 
     .weather-current {
-       font-size: 1.2rem;
+       font-size: 1.5rem;
+       display: flex;
     }
 
     .weather-current sup {
-        font-size: 0.7rem;
+        font-size: 1rem;
     }
 
     .weather-range {

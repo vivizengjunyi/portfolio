@@ -106,6 +106,7 @@
     list-style-type: none;
     font-family: 'Otomanopee One', sans-serif;
     gap: 1rem;
+    z-index: 1;
 }
 
 .dropdown-menu a{
