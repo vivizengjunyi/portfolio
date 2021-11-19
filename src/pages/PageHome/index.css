@@ -9,6 +9,7 @@
     line-height: 2rem;
     gap: 1rem;
     background: var(--color5);
+    position: relative;
 }
 
 .animate__animated {
@@ -66,7 +67,7 @@
 .svg-wave {
     position: absolute;
     left:0;
-    bottom:0;
+    bottom:-10px;
 }
 
 .svg-wave path {
@@ -353,27 +354,28 @@
 @media (min-width: 64rem) {
     /* banner section */
     .animate__animated {
-        font-size: 1.8rem;
+        font-size: 3rem;
     }
     
     .intro {
-        font-size: 1.8rem;
+        font-size: 3rem;
     }
 
     .flex-container {
-        margin: 1.8rem 0;
+        margin: 2rem 0;
     }
     
     .flex-container P:nth-child(1) {
-        font-size: 1.8rem;
+        font-size: 3rem;
     }
     
     .flex-container P:nth-child(2) {
-        font-size: 1.8rem;
+        font-size: 3rem;
     }
     
     .banner .social-icons a {
-        font-size: 1.6rem;
+        font-size:3rem;
+        margin-top: 2rem;
     }
 
     /* works section */ 
@@ -460,5 +462,11 @@
     .design-stack {
         width: 50%;
         margin-top: 2rem;
+    }
+}
+
+@media (min-width: 1500px) {
+    .svg-wave {
+        bottom:-50px;
     }
 }

@@ -1,6 +1,8 @@
-import gomovie from '../images/gomovie-three-device.png';
+import gomovie from '../images/movie-three-device.png';
 import portfolio from '../images/portfolio-three-device.png';
-import gomovieVideo from '../videos/gomovie-video.mp4';
+import capstone from '../images/capstone-three-device.png';
+import gomovieVideo from '../videos/movie-video.mp4';
+import capstoneVideo from '../videos/capstone-video.mp4';
 import portfolioVideo from '../videos/portfolio-video.mp4';
 import {FaReact, FaSass, FaWordpress} from 'react-icons/fa';
 import {DiJavascript1, DiPhp} from 'react-icons/di';
@@ -41,15 +43,15 @@ const projects = [
     {
         'name': 'Capstone Project',
         'briefIntro': 'This is a WordPress and Woocommerce project.',
-        'image':gomovie,
-        'video': gomovieVideo,
+        'image':capstone,
+        'video': capstoneVideo,
         'overview':'comming soon',
         'code' : 'comming soon',
         'reflection': 'comming soon',
         'tool': [FaWordpress, DiPhp, DiJavascript1, FaSass, IoLogoFigma],
         'date': 'Nov 2021',
         'role': 'Team up with three classmates',
-        'projectLink':'junyizeng.me',
+        'projectLink':'https://tranquiltofino.bcitwebdeveloper.ca/',
         'gitHubLink':'https://github.com/vivizengjunyi/tranquil-tofino',
     }
 ]
