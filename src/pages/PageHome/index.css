@@ -1,7 +1,7 @@
 /* banner section */
 .banner {
     width: 100%;
-    height: 85vh;
+    height: 90vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -61,6 +61,16 @@
 .banner .social-icons a:active,
 .banner .social-icons a:focus {
     color:var(--color1);
+}
+
+.svg-wave {
+    position: absolute;
+    left:0;
+    bottom:0;
+}
+
+.svg-wave path {
+    fill: var(--color3);
 }
 
 /* works section */

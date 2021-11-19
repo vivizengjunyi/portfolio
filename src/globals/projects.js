@@ -9,20 +9,6 @@ import {IoLogoFigma} from 'react-icons/io5';
 
 const projects = [
     {
-        'name': 'Capstone Project',
-        'briefIntro': 'This is a WordPress and Woocommerce project.',
-        'image':gomovie,
-        'video': gomovieVideo,
-        'overview':'comming soon',
-        'code' : 'comming soon',
-        'reflection': 'comming soon',
-        'tool': [FaWordpress, DiPhp, DiJavascript1, FaSass, IoLogoFigma],
-        'date': 'Nov 2021',
-        'role': 'Team up with three classmates',
-        'projectLink':'junyizeng.me',
-        'gitHubLink':'https://github.com/vivizengjunyi/tranquil-tofino',
-    },
-    {
         'name': 'React Movie Database',
         'briefIntro': 'This is a website showing movie databases. It allows users to search movies, gather information, and add favorite movies. Developed with React JS using the Movie Database API.',
         'image':gomovie,
@@ -51,6 +37,20 @@ const projects = [
         'role':' Developer & Designer',
         'projectLink':'https://junyizeng.me',
         'gitHubLink':'https://github.com/vivizengjunyi/portfolio',
+    },
+    {
+        'name': 'Capstone Project',
+        'briefIntro': 'This is a WordPress and Woocommerce project.',
+        'image':gomovie,
+        'video': gomovieVideo,
+        'overview':'comming soon',
+        'code' : 'comming soon',
+        'reflection': 'comming soon',
+        'tool': [FaWordpress, DiPhp, DiJavascript1, FaSass, IoLogoFigma],
+        'date': 'Nov 2021',
+        'role': 'Team up with three classmates',
+        'projectLink':'junyizeng.me',
+        'gitHubLink':'https://github.com/vivizengjunyi/tranquil-tofino',
     }
 ]
 
