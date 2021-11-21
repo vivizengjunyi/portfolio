@@ -9,6 +9,7 @@ import './index.css';
 
 
 function Header() {
+    
     const [burgerMenuShow, setBurgerMenuShow] = useState(false);
     const [theme, setTheme] = useState('yellow');
 
@@ -19,9 +20,11 @@ function Header() {
             setBurgerMenuShow(true);
         }
     }
+
     useEffect(() => {
         document.querySelector("#colorCss").href = `../${theme}.css`;
     }, [theme])
+
     return (
         <nav className="navigation">
             <NavLink to="/" className='logo-container'><img src={logo} alt='logo' className='logo'/></NavLink>
