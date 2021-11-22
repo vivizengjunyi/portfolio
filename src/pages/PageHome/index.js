@@ -57,9 +57,9 @@ const PageHome = () => {
                 <div className='weather'>
                     <Weather />
                 </div>
-                <svg className='svg-wave' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                {/* <svg className='svg-wave' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
                     <path fill="#0099ff" fill-opacity="1" d="M0,256L48,245.3C96,235,192,213,288,218.7C384,224,480,256,576,240C672,224,768,160,864,149.3C960,139,1056,181,1152,170.7C1248,160,1344,96,1392,64L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
-                </svg>
+                </svg> */}
             </section>
             <section className="about" id="about">
                 <h2>About Me</h2>

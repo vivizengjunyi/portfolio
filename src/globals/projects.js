@@ -39,7 +39,7 @@ const projects = [
         'role':' Developer & Designer',
         'projectLink':'https://junyizeng.me',
         'gitHubLink':'https://github.com/vivizengjunyi/portfolio',
-    },
+    }/* ,
     {
         'name': 'Capstone Project',
         'briefIntro': 'This is a WordPress and Woocommerce project.',
@@ -53,7 +53,7 @@ const projects = [
         'role': 'Team up with three classmates',
         'projectLink':'https://tranquiltofino.bcitwebdeveloper.ca/',
         'gitHubLink':'https://github.com/vivizengjunyi/tranquil-tofino',
-    }
+    } */
 ]
 
 export default projects
