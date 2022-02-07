@@ -118,6 +118,11 @@
     width: 100%;
 }
 
+.weather-forecast-img {
+    padding: 1.5rem;
+    border-radius: 2rem;
+}
+
 .project-img img {
     width: 280px;
 }
@@ -154,9 +159,15 @@
     color:var(--color5); 
 }
 
-.project-info p {
+.project-info p, .features-list {
     color: var(--color4);
     margin-top: 1rem;
+}
+
+.features-list {
+    line-height: 1.5rem;
+    margin-left: 1rem;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .tool-list {
