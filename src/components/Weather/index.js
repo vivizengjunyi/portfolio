@@ -9,14 +9,6 @@ export const Weather = () => {
     const cities = ['Vancouver', 'Regina', 'Oakville'];
     const postCode = ['V6M%204H1', 'J4Y%200B5', 'L6H%206W8'];
 
-    // useEffect(() => {
-    //     const fetchWeather = async () => {
-    //         const { data } = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=6f55c7ead5bb1de16181b1b90611eea9`);
-    //         setDataWeather({ data });
-    //     }
-    //     fetchWeather(dataWeather);
-    // }, [city]);
-
     useEffect(() => {
         const fetchWeather = async () => {
             const { data } = await axios.get(`https://api.weathersource.com/v1/4c6153d5b0726ef40e8d/postal_codes/${postCode[city]},ca/nowcast.json?timestamp_eq=${new Date().toISOString()}`, {
@@ -70,7 +62,7 @@ export const Weather = () => {
             <div className='weather-name'>
                 {dataWeather.data.weather[0].main}
             </div>
-            {/* <img src={`https://openweathermap.org/img/wn/${dataWeather.data.weather[0].icon}@2x.png`} alt={dataWeather.data.weather.main} className='weather-icon' /> */}
+            <img src={`https://openweathermap.org/img/wn/${dataWeather.data.weather[0].icon}@2x.png`} alt={dataWeather.data.weather.main} className='weather-icon' />
             <div className='weather-current'>
                 {Math.round((dataWeather.data[0].tempAvg - 32) / 1.8000)}
                 <sup>&deg;C</sup>

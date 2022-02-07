@@ -16,24 +16,23 @@ import { FaReact } from 'react-icons/fa';
 
 
 const PageHome = () => {
-    const [showWorks, setShowWorks] = useState(false);
+    // const [showWorks, setShowWorks] = useState(false);
 
-    useEffect(() => {
-
-        document.addEventListener('scroll', function (e) {
-            const clientHeight = document.documentElement.clientHeight
-            const scrollTop = document.documentElement.scrollTop
-            console.log(scrollTop)
-            const sections = document.getElementsByTagName("section");
-            if (sections[0] && sections[1]) {
-                const section1Height = sections[0].clientHeight;
-                const section2Height = sections[1].clientHeight;
-                const section3Height = 350;
-                const showWorks = clientHeight + scrollTop > section1Height + section2Height + section3Height;
-                setShowWorks(showWorks);
-            }
-        });
-    })
+    // useEffect(() => {
+    //     document.addEventListener('scroll', function (e) {
+    //         const clientHeight = document.documentElement.clientHeight
+    //         const scrollTop = document.documentElement.scrollTop
+    //         console.log(scrollTop)
+    //         const sections = document.getElementsByTagName("section");
+    //         if (sections[0] && sections[1]) {
+    //             const section1Height = sections[0].clientHeight;
+    //             const section2Height = sections[1].clientHeight;
+    //             const section3Height = 350;
+    //             const showWorks = clientHeight + scrollTop > section1Height + section2Height + section3Height;
+    //             setShowWorks(showWorks);
+    //         }
+    //     });
+    // })
 
     return (
         <div>
@@ -57,9 +56,7 @@ const PageHome = () => {
                     <a href="https://github.com/vivizengjunyi" target="_blank"><BsGithub /></a>
                     <a href="https://www.linkedin.com/in/junyi-zeng-266b811a1/" target="_blank"><AiFillLinkedin /></a>
                 </div>
-                <div className='weather'>
-                    <Weather />
-                </div>
+                <Weather />
             </section>
             <section className="about" id="about">
                 <h2>About Me</h2>
@@ -94,7 +91,7 @@ const PageHome = () => {
             <section className="works" id="works">
                 <h2>My Projects</h2>
                 <div className="projects">
-                    <div className='project-card'>
+                    <div className='project-card' id='project-card-weather-project'>
                         <div className='project-img'>
                             <a href='https://junyizeng.me/weather/' target="_blank"><img src={weatherProject} className='weather-forecast-img' alt="react redux weather forecast project" /></a>
                         </div>
@@ -119,13 +116,11 @@ const PageHome = () => {
                             <a href='https://github.com/vivizengjunyi/react-redux-weather' target="_blank">View on gitHub</a>
                         </div>
                     </div>
-
-
                     {
-                        showWorks && projects.map((singleProject, i) =>
+                        projects.map((singleProject, i) =>
                             <div key={i} className='project-card'>
                                 <div className='project-img'>
-                                <a href={singleProject.projectLink} target="_blank"><img src={singleProject.image} alt={singleProject.name} /></a>
+                                    <a href={singleProject.projectLink} target="_blank"><img src={singleProject.image} alt={singleProject.name} /></a>
                                 </div>
                                 <div className='project-info'>
                                     <h3>{singleProject.name}</h3>
