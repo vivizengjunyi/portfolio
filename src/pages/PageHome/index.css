@@ -64,16 +64,6 @@
     color:var(--color1);
 }
 
-.svg-wave {
-    position: absolute;
-    left:0;
-    bottom:-10px;
-}
-
-.svg-wave path {
-    fill: var(--color3);
-}
-
 /* works section */
 .works {
     display: flex;
@@ -101,8 +91,8 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin-top: 8rem;
-    margin-bottom: 8rem;
+    margin-top: 4rem;
+    margin-bottom: 1rem;
 }
 
 .project-card {
@@ -116,6 +106,11 @@
 
 .project-img {
     width: 100%;
+}
+
+.weather-forecast-img {
+    padding: 1.5rem;
+    border-radius: 2rem;
 }
 
 .project-img img {
@@ -154,9 +149,16 @@
     color:var(--color5); 
 }
 
-.project-info p {
+.project-info p, .features-list {
     color: var(--color4);
     margin-top: 1rem;
+}
+
+.features-list {
+    line-height: 1.5rem;
+    margin-left: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    text-align: left;
 }
 
 .tool-list {
@@ -300,13 +302,22 @@
     .projects {
         display: flex;
         flex-direction: column;
-        gap: 6rem;
+        gap: 3rem;
     }
 
     .project-card {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto auto;
+    }
+
+    #project-card-weather {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
     }
 
     .project-img{
@@ -393,7 +404,8 @@
         padding-right: 5rem;
     }
 
-    .project-card {
+    .project-card,
+    #project-card-weather {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -462,11 +474,5 @@
     .design-stack {
         width: 50%;
         margin-top: 2rem;
-    }
-}
-
-@media (min-width: 1500px) {
-    .svg-wave {
-        bottom:-50px;
     }
 }

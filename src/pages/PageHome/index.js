@@ -10,28 +10,29 @@ import { AiFillLinkedin, AiOutlineMail } from 'react-icons/ai';
 import "./index.css";
 import myPhoto from '../../images/portfolio-me.jpg';
 import myPhotoBig from '../../images/portfolio-me-bigger.JPG';
-
-
+import weatherProject from '../../images/react-redux-weather-forecast-front.png';
+import { SiRedux } from 'react-icons/si';
+import { FaReact } from 'react-icons/fa';
 
 const PageHome = () => {
-    const [showWorks, setShowWorks] = useState(false);
+    // const [showWorks, setShowWorks] = useState(false);
 
-    useEffect(() => {
+    // useEffect(() => {
 
-        document.addEventListener('scroll', function (e) {
-            const clientHeight = document.documentElement.clientHeight
-            const scrollTop = document.documentElement.scrollTop
-            console.log(scrollTop)
-            const sections = document.getElementsByTagName("section");
-            if (sections[0] && sections[1]) {
-                const section1Height = sections[0].clientHeight;
-                const section2Height = sections[1].clientHeight;
-                const section3Height = 350;
-                const showWorks = clientHeight + scrollTop > section1Height + section2Height + section3Height;
-                setShowWorks(showWorks);
-            }
-        });
-    })
+    //     document.addEventListener('scroll', function (e) {
+    //         const clientHeight = document.documentElement.clientHeight
+    //         const scrollTop = document.documentElement.scrollTop
+    //         console.log(scrollTop)
+    //         const sections = document.getElementsByTagName("section");
+    //         if (sections[0] && sections[1]) {
+    //             const section1Height = sections[0].clientHeight;
+    //             const section2Height = sections[1].clientHeight;
+    //             const section3Height = 350;
+    //             const showWorks = clientHeight + scrollTop > section1Height + section2Height + section3Height;
+    //             setShowWorks(showWorks);
+    //         }
+    //     });
+    // })
     return (
         <div>
             <section className="banner">
@@ -57,9 +58,6 @@ const PageHome = () => {
                 <div className='weather'>
                     <Weather />
                 </div>
-                {/* <svg className='svg-wave' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-                    <path fill="#0099ff" fill-opacity="1" d="M0,256L48,245.3C96,235,192,213,288,218.7C384,224,480,256,576,240C672,224,768,160,864,149.3C960,139,1056,181,1152,170.7C1248,160,1344,96,1392,64L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
-                </svg> */}
             </section>
             <section className="about" id="about">
                 <h2>About Me</h2>
@@ -94,11 +92,36 @@ const PageHome = () => {
             <section className="works" id="works">
                 <h2>My Projects</h2>
                 <div className="projects">
+                <div className='project-card' id='project-card-weather'>
+                        <div className='project-img'>
+                            <a href='https://junyizeng.me/weather/' target="_blank"><img src={weatherProject} className='weather-forecast-img' alt="react redux weather forecast project" /></a>
+                        </div>
+                        <div className='project-info'>
+                            <h3>React Redux Weather Forecast</h3>
+                            <p>This weather forecast project was created with React and Redux, using the openweathermap database API. Special features are below: </p>
+                            <ul className='features-list'>
+                                <li>Search keyword to get location.</li>
+                                <li>List selected location's current weather and 5 days forecast weather.</li>
+                                <li>Save selected location to localstorage.</li>
+                                <li>List recently selected locations.</li>
+                                <li>Change the background to a photo for that specific current weather when selecting a location.</li>
+                            </ul>
+                            <div className='tool-list'>
+                                <h4>Tools</h4>
+                                <FaReact className='tool-icon' />
+                                <SiRedux className='tool-icon' />
+                            </div>
+                        </div>
+                        <div className='links'>
+                            <a href='https://junyizeng.me/weather/' target="_blank">View Live Site</a>
+                            <a href='https://github.com/vivizengjunyi/react-redux-weather' target="_blank">View on gitHub</a>
+                        </div>
+                    </div>
                     {
-                        showWorks && projects.map((singleProject, i) =>
+                        projects.map((singleProject, i) =>
                             <div key={i} className='project-card'>
                                 <div className='project-img'>
-                                    <img src={singleProject.image} alt={singleProject.name} />
+                                <a href={singleProject.projectLink} target="_blank"><img src={singleProject.image} alt={singleProject.name} /></a>
                                 </div>
                                 <div className='project-info'>
                                     <h3>{singleProject.name}</h3>

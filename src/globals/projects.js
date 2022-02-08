@@ -22,7 +22,7 @@ const projects = [
         'tool': [FaReact, DiJavascript1, FaSass, SiAdobexd],
         'date': 'Sep 2021',
         'role':'Developer & Designer',
-        'projectLink':'https://movie.junyizeng.me',
+        'projectLink':'https://junyizeng.me/gomovie/',
         'gitHubLink':'https://github.com/vivizengjunyi/BCIT-Movie',
     },
     {
