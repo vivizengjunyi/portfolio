@@ -7,6 +7,8 @@ export const Weather = () => {
     const [city, setCity] = useState('Vancouver');
     const citySelect = useRef(null);
     const cities = ['Vancouver', 'Regina', 'Guangzhou'];
+    const [_monthAndDay, setMonthAndDay] = useState("");
+    const [_hourAndMinute, setHourAndMinute] = useState("");
 
     useEffect(() => {
         const fetchWeather = async () => {
@@ -30,7 +32,7 @@ export const Weather = () => {
         var nd = new Date(utc + (3600000*offset));
         let month = nd.toLocaleString("en-US", {month: "long"}); 
         let date = nd.toLocaleString("en-US", {day: "numeric"});
-        return `${month} ${date}`;
+        setMonthAndDay(month + " " + date);
     }
 
     function hourAndMinute() {
@@ -42,8 +44,17 @@ export const Weather = () => {
         var nd = new Date(utc + (3600000*offset));
         var date = nd.toLocaleString('en-US',{hour12:false}).split(" ");
         var time = date[1];
-        return time.split(':').slice(0, 2).join(':');
+        setHourAndMinute(time.split(':').slice(0, 2).join(':'));
     }
+
+    useEffect(() => {
+        const interval = () => {
+            monthAndDay();
+            hourAndMinute();
+        };
+        const i = setInterval(interval,1000)
+        return () => clearInterval(i);
+    }, [dataWeather]);
    
 
     return dataWeather ? (
@@ -54,8 +65,8 @@ export const Weather = () => {
             <div className='city-name'>
                 {dataWeather.data.name}
             </div>
-            <div className='city-date'>{monthAndDay(dataWeather.data.timezone)}</div>
-            <div className='city-time'>{hourAndMinute(dataWeather.data.timezone)}</div>
+            <div className='city-date'>{_monthAndDay}</div>
+            <div className='city-time'>{_hourAndMinute}</div>
             <div className='weather-name'>
                 {dataWeather.data.weather[0].main}
             </div>

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import Typewriter from "typewriter-effect";
 import projects from '../../globals/projects';
@@ -10,9 +10,9 @@ import { AiFillLinkedin, AiOutlineMail } from 'react-icons/ai';
 import "./index.css";
 import myPhoto from '../../images/portfolio-me.jpg';
 import myPhotoBig from '../../images/portfolio-me-bigger.JPG';
-import weatherProject from '../../images/react-redux-weather-forecast-front.png';
-import { SiRedux } from 'react-icons/si';
-import { FaReact } from 'react-icons/fa';
+import weatherProject from '../../images/weather-forecast.png';
+import { SiRedux, SiTypescript } from 'react-icons/si';
+import { FaReact, FaBootstrap } from 'react-icons/fa';
 
 const PageHome = () => {
     // const [showWorks, setShowWorks] = useState(false);
@@ -53,7 +53,7 @@ const PageHome = () => {
                 <div className='social-icons'>
                     <a href="mailto:vivizengjunyi@gmail.com" target="_blank"><AiOutlineMail /></a>
                     <a href="https://github.com/vivizengjunyi" target="_blank"><BsGithub /></a>
-                    <a href="https://www.linkedin.com/in/junyi-zeng-266b811a1/" target="_blank"><AiFillLinkedin /></a>
+                    <a href="https://www.linkedin.com/in/junyi-vivi-zeng-266b811a1/" target="_blank"><AiFillLinkedin /></a>
                 </div>
                 <div className='weather'>
                     <Weather />
@@ -67,7 +67,7 @@ const PageHome = () => {
                 </picture>
                 <div className='about-info'>
                     {about.map((singleAbout, i) =>
-                        <p>{singleAbout.content}</p>
+                        <p key={i}>{singleAbout.content}</p>
                     )}
                 </div>
                 <div className='stack'>
@@ -97,19 +97,21 @@ const PageHome = () => {
                             <a href='https://junyizeng.me/weather/' target="_blank"><img src={weatherProject} className='weather-forecast-img' alt="react redux weather forecast project" /></a>
                         </div>
                         <div className='project-info'>
-                            <h3>React Redux Weather Forecast</h3>
-                            <p>This weather forecast project was created with React and Redux, using the openweathermap database API. Special features are below: </p>
+                            <h3>React, Redux and TypeScript Weather Forecast</h3>
+                            <p>This weather forecast project was created with React, Redux and TypeScript, using the openweathermap database API. Special features are below: </p>
                             <ul className='features-list'>
                                 <li>Search keyword to get location.</li>
                                 <li>List selected location's current weather and 5 days forecast weather.</li>
                                 <li>Save selected location to localstorage.</li>
                                 <li>List recently selected locations.</li>
-                                <li>Change the background to a photo for that specific current weather when selecting a location.</li>
+                                <li>Change background image based on location's main weather</li>
                             </ul>
                             <div className='tool-list'>
                                 <h4>Tools</h4>
                                 <FaReact className='tool-icon' />
                                 <SiRedux className='tool-icon' />
+                                <SiTypescript className='tool-icon' />
+                                <FaBootstrap className='tool-icon' />
                             </div>
                         </div>
                         <div className='links'>
