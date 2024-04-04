@@ -89,7 +89,7 @@ const PageHome = () => {
 
                     <div className='project-card' id='project-card-weather'>
                         <div className='project-img'>
-                            <a href='https://vivizengjunyi.github.io/chatbotai/' target="_blank"><img src={chatbotai} className='weather-forecast-img' alt="react redux typescript chatbotai project" /></a>
+                            <a href='https://vivizengjunyi.github.io/chat/' target="_blank"><img src={chatbotai} className='weather-forecast-img' alt="react redux typescript chatbotai project" /></a>
                         </div>
                         <div className='project-info'>
                             <h3>Chatbot AI - React, Redux, TypeScript and Tailwind </h3>
@@ -112,7 +112,7 @@ const PageHome = () => {
                             </div>
                         </div>
                         <div className='links'>
-                            <a href='https://vivizengjunyi.github.io/chatbotai/' target="_blank">View Live Site</a>
+                            <a href='https://vivizengjunyi.github.io/chat/' target="_blank">View Live Site</a>
                             <a href='https://github.com/vivizengjunyi/chatbot' target="_blank">View on gitHub</a>
                         </div>
                     </div>
