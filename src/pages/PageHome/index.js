@@ -11,8 +11,10 @@ import "./index.css";
 import myPhoto from '../../images/portfolio-me.jpg';
 import myPhotoBig from '../../images/portfolio-me-bigger.JPG';
 import weatherProject from '../../images/weather-forecast.png';
+import chatbotai from '../../images/chatbotai.png';
 import { SiRedux, SiTypescript } from 'react-icons/si';
 import { FaReact, FaBootstrap } from 'react-icons/fa';
+import { SiTailwindcss } from "react-icons/si";
 
 const PageHome = () => {
     // const [showWorks, setShowWorks] = useState(false);
@@ -92,9 +94,42 @@ const PageHome = () => {
             <section className="works" id="works">
                 <h2>My Projects</h2>
                 <div className="projects">
-                <div className='project-card' id='project-card-weather'>
+
+
+                    <div className='project-card' id='project-card-weather'>
                         <div className='project-img'>
-                            <a href='https://junyizeng.me/weather/' target="_blank"><img src={weatherProject} className='weather-forecast-img' alt="react redux weather forecast project" /></a>
+                            <a href='https://vivizengjunyi.github.io/chatbotai/' target="_blank"><img src={chatbotai} className='weather-forecast-img' alt="react redux typescript chatbotai project" /></a>
+                        </div>
+                        <div className='project-info'>
+                            <h3>Chatbot AI - React, Redux, TypeScript and Tailwind </h3>
+                            <p>Chatbot AI is a dynamic tool designed to simplify the completion of forms and questionnaires. It guarantees efficient and precise completion of forms, significantly enhancing the user experience through a suite of innovative features:</p>
+                            <ul className='features-list'>
+                                <li>Streamlines form completion with conversational assistance.</li>
+                                <li>Initiates tailored conversation flows based on user responses.</li>
+                                <li>Accommodates a variety of answer types, including dropdowns, date picker, phone numbers, boolean, email, and more.</li>
+                                <li>Issues a warning if a provided answer does not match the expected answer type.</li>
+                                <li>Modifying responses adjusts the conversation flow for seamless interactions.</li>
+                                <li>Enables users to address looped questions multiple times as required.</li>
+                                <li>Presents responses in a structured table format for straightforward review.</li>
+                            </ul>
+                            <div className='tool-list'>
+                                <h4>Tools</h4>
+                                <FaReact className='tool-icon' />
+                                <SiRedux className='tool-icon' />
+                                <SiTypescript className='tool-icon' />
+                                <SiTailwindcss className='tool-icon' />
+                            </div>
+                        </div>
+                        <div className='links'>
+                            <a href='https://junyizeng.me/chatbotai/' target="_blank">View Live Site</a>
+                            <a href='https://github.com/vivizengjunyi/chatbot' target="_blank">View on gitHub</a>
+                        </div>
+                    </div>
+
+
+                    <div className='project-card' id='project-card-weather'>
+                        <div className='project-img'>
+                            <a href='https://vivizengjunyi.github.io/weather/' target="_blank"><img src={weatherProject} className='weather-forecast-img' alt="react redux weather forecast project" /></a>
                         </div>
                         <div className='project-info'>
                             <h3>React, Redux and TypeScript Weather Forecast</h3>
@@ -115,7 +150,7 @@ const PageHome = () => {
                             </div>
                         </div>
                         <div className='links'>
-                            <a href='https://junyizeng.me/weather/' target="_blank">View Live Site</a>
+                            <a href='https://vivizengjunyi.github.io/weather/' target="_blank">View Live Site</a>
                             <a href='https://github.com/vivizengjunyi/react-redux-weather' target="_blank">View on gitHub</a>
                         </div>
                     </div>
@@ -123,7 +158,7 @@ const PageHome = () => {
                         projects.map((singleProject, i) =>
                             <div key={i} className='project-card'>
                                 <div className='project-img'>
-                                <a href={singleProject.projectLink} target="_blank"><img src={singleProject.image} alt={singleProject.name} /></a>
+                                    <a href={singleProject.projectLink} target="_blank"><img src={singleProject.image} alt={singleProject.name} /></a>
                                 </div>
                                 <div className='project-info'>
                                     <h3>{singleProject.name}</h3>

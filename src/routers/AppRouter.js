@@ -7,7 +7,7 @@ import PageProject from '../pages/PageProject';
 
 function AppRouter() {
   return (
-    <Router>
+    <Router basename="/portfolio">
       <div className="wrapper">
         <Header />
         <main className="main">
