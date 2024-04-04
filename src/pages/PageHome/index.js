@@ -17,24 +17,6 @@ import { FaReact, FaBootstrap } from 'react-icons/fa';
 import { SiTailwindcss } from "react-icons/si";
 
 const PageHome = () => {
-    // const [showWorks, setShowWorks] = useState(false);
-
-    // useEffect(() => {
-
-    //     document.addEventListener('scroll', function (e) {
-    //         const clientHeight = document.documentElement.clientHeight
-    //         const scrollTop = document.documentElement.scrollTop
-    //         console.log(scrollTop)
-    //         const sections = document.getElementsByTagName("section");
-    //         if (sections[0] && sections[1]) {
-    //             const section1Height = sections[0].clientHeight;
-    //             const section2Height = sections[1].clientHeight;
-    //             const section3Height = 350;
-    //             const showWorks = clientHeight + scrollTop > section1Height + section2Height + section3Height;
-    //             setShowWorks(showWorks);
-    //         }
-    //     });
-    // })
     return (
         <div>
             <section className="banner">
@@ -68,15 +50,24 @@ const PageHome = () => {
                     <img src={myPhoto} alt="my photo" />
                 </picture>
                 <div className='about-info'>
-                    {about.map((singleAbout, i) =>
-                        <p key={i}>{singleAbout.content}</p>
-                    )}
+                    
+                    <p>{about[0].content}</p>
+                    <ul className='summary'>
+                        {about[1].summary.map((item, i) => {
+                            return (
+                                <li>
+                                    {item}
+                                </li>
+                            )
+                        })}
+                    </ul>
+                    
                 </div>
                 <div className='stack'>
                     <div className='teck-stack'>
                         <h3>Teck Stack</h3>
                         <div className='stack-list'>
-                            {about[3].teckStack.map(singleTeckStack =>
+                            {about[2].teckStack.map(singleTeckStack =>
                                 <span>{singleTeckStack}</span>
                             )}
                         </div>
@@ -84,7 +75,7 @@ const PageHome = () => {
                     <div className='design-stack'>
                         <h3>Design Stack</h3>
                         <div className='stack-list'>
-                            {about[4].designStack.map(singleDesignStack =>
+                            {about[3].designStack.map(singleDesignStack =>
                                 <span>{singleDesignStack}</span>
                             )}
                         </div>

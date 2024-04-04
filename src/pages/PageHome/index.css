@@ -268,6 +268,10 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+.summary li{
+    margin-top: 1rem;
+}
+
 @media (min-width: 25rem) {
     .projects .links a {
         padding: 0.3rem;

@@ -1,18 +1,20 @@
 const about = [
     {
-        'content':'Hello! My name is Junyi(Vivi) Zeng, a front-end web developer based in Vancouver BC. Also, I am a graduate of the Front-end Web Developer Program at BCIT — a full-time six-month program with hands-on experience building inventive websites from scratch. Before this program, I attended two part-time web development courses at ComIT and Emily Carr from January to April in 2021. When flowing back to 2020, I started self-studying web development through MDN, freeCodeCamp, and W3School. Roughly calculating, I have been on the technical journey for more than 2 years. ',
+        'content': "Hello, I'm Junyi (Vivi) Zeng, a passionate front-end web developer hailing from Vancouver, BC. Below is a snapshot of my professional attributes:",
     },
     {
-        'content':'My strength lies in JavaScript, React, Redux, TypeScript, CSS, HTML and so on.',
+        'summary': [
+            "Versatile in using a wide array of front-end technologies and frameworks, such as React.js, TypeScript, Redux, JavaScript, Tailwind CSS, and Bootstrap.",
+            "Expert in the integration and maintenance of API endpoints to ensure dynamic content is consistently updated, coupled with a proficiency in using Google DevTools for debugging.",
+            "Proficient in applying Jest for comprehensive unit and integration testing within React projects.",
+            "Possesses a thorough understanding of UX and design principles, always aiming to improve user engagement and satisfaction through their application.",
+            "Known for excellent communication skills, an unwavering drive, and a dedication to fostering teamwork."]
     },
     {
-        'content':'My future career path is still in the IT industry as a developer. I strive towards always being inspired to learn about new and upcoming technologies to create meaningful web applications and sites.',
+        'teckStack': ['JavaScript', 'React', 'Redux', 'TypeScript', 'Tailwind', 'Bootstrap', 'Sass', 'Jest']
     },
     {
-        'teckStack':['HTML', 'CSS3', 'Sass', 'JavaScript', 'React', 'Redux', 'TypeScript', 'jQuery','PHP', 'mySQL', 'WordPress']
-    },
-    {
-        'designStack':['Adobe XD', 'Figma', 'Photoshop']
+        'designStack': ['Adobe XD', 'Figma', 'Photoshop']
     }
 ]
 
