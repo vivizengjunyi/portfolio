@@ -112,7 +112,7 @@ const PageHome = () => {
                             </div>
                         </div>
                         <div className='links'>
-                            <a href='https://junyizeng.me/chatbotai/' target="_blank">View Live Site</a>
+                            <a href='https://vivizengjunyi.github.io/chatbotai/' target="_blank">View Live Site</a>
                             <a href='https://github.com/vivizengjunyi/chatbot' target="_blank">View on gitHub</a>
                         </div>
                     </div>
