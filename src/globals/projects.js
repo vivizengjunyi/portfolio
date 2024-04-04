@@ -37,7 +37,7 @@ const projects = [
         'tool': [FaReact, DiJavascript1, SiAdobexd],
         'date': 'Nov 2021',
         'role':' Developer & Designer',
-        'projectLink':'https://vivizengjunyi.github.io/portfolio/',
+        'projectLink':'https://vivizengjunyi.github.io/',
         'gitHubLink':'https://github.com/vivizengjunyi/portfolio',
     }/* ,
     {

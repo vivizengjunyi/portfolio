@@ -22,7 +22,7 @@ function Header() {
     }
 
     useEffect(() => {
-        document.querySelector("#colorCss").href = `/portfolio/${theme}.css`;
+        document.querySelector("#colorCss").href = `/${theme}.css`;
     }, [theme])
 
     return (
