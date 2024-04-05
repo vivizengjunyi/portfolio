@@ -10,7 +10,7 @@ import { AiFillLinkedin, AiOutlineMail } from 'react-icons/ai';
 import "./index.css";
 import myPhoto from '../../images/portfolio-me.jpg';
 import myPhotoBig from '../../images/portfolio-me-bigger.JPG';
-import weatherProject from '../../images/weather-forecast.png';
+import weatherProject from '../../images/weather-device.png';
 import chatbotai from '../../images/chatbotai-device.png';
 import { SiRedux, SiTypescript } from 'react-icons/si';
 import { FaReact, FaBootstrap } from 'react-icons/fa';
