@@ -11,7 +11,7 @@ import "./index.css";
 import myPhoto from '../../images/portfolio-me.jpg';
 import myPhotoBig from '../../images/portfolio-me-bigger.JPG';
 import weatherProject from '../../images/weather-forecast.png';
-import chatbotai from '../../images/chatbotai.png';
+import chatbotai from '../../images/chatbotai-device.png';
 import { SiRedux, SiTypescript } from 'react-icons/si';
 import { FaReact, FaBootstrap } from 'react-icons/fa';
 import { SiTailwindcss } from "react-icons/si";
@@ -85,14 +85,12 @@ const PageHome = () => {
             <section className="works" id="works">
                 <h2>My Projects</h2>
                 <div className="projects">
-
-
                     <div className='project-card' id='project-card-weather'>
                         <div className='project-img'>
                             <a href='https://vivizengjunyi.github.io/chat/' target="_blank"><img src={chatbotai} className='weather-forecast-img' alt="react redux typescript chatbotai project" /></a>
                         </div>
                         <div className='project-info'>
-                            <h3>Chatbot AI - React, Redux, TypeScript and Tailwind </h3>
+                            <h3>Chatbot AI - React, Redux, TypeScript and Tailwind CSS</h3>
                             <p>Chatbot AI is a dynamic tool designed to simplify the completion of forms and questionnaires. It guarantees efficient and precise completion of forms, significantly enhancing the user experience through a suite of innovative features:</p>
                             <ul className='features-list'>
                                 <li>Streamlines form completion with conversational assistance.</li>
@@ -116,8 +114,6 @@ const PageHome = () => {
                             <a href='https://github.com/vivizengjunyi/chatbot' target="_blank">View on gitHub</a>
                         </div>
                     </div>
-
-
                     <div className='project-card' id='project-card-weather'>
                         <div className='project-img'>
                             <a href='https://vivizengjunyi.github.io/weather/' target="_blank"><img src={weatherProject} className='weather-forecast-img' alt="react redux weather forecast project" /></a>
