@@ -4,11 +4,11 @@ const about = [
     },
     {
         'summary': [
-            "Versatile in using a wide array of front-end technologies and frameworks, such as React.js, TypeScript, Redux, JavaScript, Tailwind CSS, and Bootstrap.",
+            "Proficient in using a wide array of front-end technologies and frameworks, such as React.js, TypeScript, Redux, JavaScript, Tailwind CSS, Sass and Bootstrap.",
             "Expert in utilizing API endpoints for dynamic content updating and debugging using Google DevTools.",
             "Proficient in applying Jest for comprehensive unit and integration testing within React projects.",
-            "Possesses a thorough understanding of UX and design principles, always aiming to improve user engagement and satisfaction through their application.",
-            "Known for excellent communication skills, an unwavering drive, and a dedication to fostering teamwork."]
+            "Strong background in UX and design principles, with a natural aptitude for user experience",
+            "Possessing excellent communication skills, highly motivated, and a dedicated team player."]
     },
     {
         'teckStack': ['JavaScript', 'React', 'Redux', 'TypeScript', 'Tailwind', 'Bootstrap', 'Sass', 'Jest']
